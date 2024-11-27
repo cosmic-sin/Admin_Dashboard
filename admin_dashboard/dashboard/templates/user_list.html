@@ -1,0 +1,30 @@
+{% extends 'dashboard/base.html' %}
+{% block content %}
+<h1>Users</h1>
+<a href="{% url 'add_user' %}" class="btn btn-success mb-3">Add User</a>
+<table class="table table-striped">
+    <head>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </head>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role.name }}</td>
+            <td>{{ user.is_active|yesno:"Active,Inactive" }}</td>
+            <td>
+                <a href="{% url 'edit_user' user.id %}" class="btn btn-sm btn-warning">Edit</a>
+                <a href="{% url 'delete_user' user.id %}" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://st.depositphotos.com/2143989/2630/v/450/depositphotos_26301339-stock-illustration-abstract-background.jpg");
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centers the box vertically and horizontally */
+    width: 100%;
+}
+
+#box {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Adds a blur effect to the background behind the box */
+    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    max-width: 400px;
+    width: 90%; /* Adjusts for smaller screens */
+}
+
+.icon {
+    display: block;
+    margin: 0 auto 20px auto; /* Centers the image with spacing below */
+    max-width: 100px;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds consistent spacing between form elements */
+}
+
+.btn {
+    width: 100%; /* Makes buttons stretch to full form width */
+}
